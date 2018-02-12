@@ -1,0 +1,18 @@
+.container {
+    composes: full-page from global;
+}
+
+.inner {
+    composes: row text-block from global;
+    width: 100%;
+}
+
+.glamourShot {
+    composes: col col6 from global;
+    flex-shrink: 0;
+}
+
+.info {
+    composes: col col6 padded from global;
+    flex-shrink: 0;
+}

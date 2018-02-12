@@ -1,0 +1,31 @@
+.container {
+    padding-top: 100vh;
+}
+
+.introWrapper {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.projectWrapper {
+    composes: light from global;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding-top: 3%;
+    position: relative;
+}
+
+.title {
+    composes: huge-text from global;
+    position: relative;
+}
+
+.subtitle {
+    font-weight: 900;
+    margin-bottom: 2em;
+    opacity: 0.85;
+    position: relative;
+    text-transform: capitalize;
+}

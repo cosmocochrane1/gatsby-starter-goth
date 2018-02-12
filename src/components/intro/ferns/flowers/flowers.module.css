@@ -1,0 +1,76 @@
+@value fern from '../ferns.module.css';
+
+.roseLeft {
+    composes: fern;
+    animation-duration: 4s;
+    height: 350px;
+    left: 30px;
+    top: -40px;
+    width: 300px;
+
+    &:before {
+        background-image: url('../../../../shared/images/rose.png');
+        transform: rotate(5deg);
+    }
+}
+.roseRight {
+    composes: roseLeft;
+    animation-duration: 3.8s;
+    height: 370px;
+    left: auto;
+    right: -60px;
+
+    &:before {
+        transform: scaleX(-1) rotate(5deg);
+    }
+}
+
+.budLeft {
+    composes: roseLeft;
+    animation-duration: 3.2s;
+    height: 200px;
+    left: 30px;
+    top: -45%;
+    width: 200px;
+
+    &:before {
+        background-image: url('../../../../shared/images/bud.png');
+        transform: scaleX(-1);
+    }
+}
+.budRight {
+    composes: budLeft;
+    animation-duration: 3s;
+    left: auto;
+    right: -60px;
+
+    &:before {
+        transform: none;
+    }
+}
+
+@media print, (max-width: 700px) {
+    .roseLeft {
+        height: 270px;
+        left: 50px;
+        top: 20px;
+        width: 240px;
+    }
+    .roseRight {
+        height: 220px;
+        left: auto;
+        right: -80px;
+        top: 30px;
+        width: 220px;
+        z-index: 1;
+        
+        &:before {
+            background-image: url('../../../../shared/images/bud.png');
+            transform: rotate(-20deg);
+        }
+    }
+    .budLeft,
+    .budRight {
+        display: none;
+    }
+}

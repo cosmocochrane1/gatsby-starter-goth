@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'GT Haptik';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../shared/fonts/gt-haptik-regular-webfont.woff2') format('woff2'),
+         url('../../shared/fonts/gt-haptik-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GT Haptik';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../../shared/fonts/gt-haptik-bold-webfont.woff2') format('woff2'),
+         url('../../shared/fonts/gt-haptik-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GT Haptik';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../../shared/fonts/gt-haptik-black-webfont.woff2') format('woff2'),
+         url('../../shared/fonts/gt-haptik-black-webfont.woff') format('woff');
+}

@@ -1,0 +1,17 @@
+.tunes {
+    composes: text-block from global;
+    background: #dedede url('../../../shared/images/background-alt.jpg');
+    color: #131313;
+    display: block;
+    text-align: center;
+}
+
+.link {
+    background: linear-gradient(#dedede 50%, #131313 50%);
+    background-position: 0 0.92em;
+    background-repeat: repeat-x;
+    background-size: 1px 15%;
+    display: inline;
+    text-shadow: 0.03em 0 #dedede, -0.03em 0 #dedede, 0 0.03em #dedede, 0 -0.03em #dedede, 0.06em 0 #dedede,
+        -0.06em 0 #dedede, 0.09em 0 #dedede, -0.09em 0 #dedede, 0.12em 0 #dedede, -0.12em 0 #dedede;
+}

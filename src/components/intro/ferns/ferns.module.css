@@ -1,0 +1,98 @@
+.bottom {
+    bottom: 0;
+    left: 0;
+    height: 300px;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+
+.top {
+    composes: bottom;
+    bottom: auto;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+.fern {
+    animation: fern 3s ease-in-out 0s infinite alternate;
+    height: 100%;
+    margin-left: -100px;
+    position: absolute;
+    top: 20px;
+    transform-origin: bottom;
+    width: 200px;
+
+    &:before {
+        background-image: url('../../../shared/images/fern.png');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    &:nth-child(2n) {
+        animation-duration: 3.7s;
+    }
+
+    &:nth-child(3n) {
+        animation-duration: 3.5s;
+    }
+
+    &:nth-child(7n) {
+        animation-duration: 4s;
+    }
+}
+.top .fern {
+    animation-direction: alternate-reverse;
+}
+
+.fernAlt {
+    composes: fern;
+
+    &:before {
+        background-image: url('../../../shared/images/fern-alt.png');
+    }
+}
+
+.fernLeft {
+    composes: fern;
+    margin-left: -80px;
+    top: -25%;
+
+    &:before {
+        transform: rotate(30deg);
+    }
+
+}
+
+.fernRight {
+    composes: fernAlt;
+    margin-left: auto;
+    margin-right: -80px;
+    right: 0;
+    top: -25%;
+
+    &:before {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes fern {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(3deg); }
+}
+
+@media print, (max-width: 700px) {
+    .fernLeft,
+    .fernRight {
+        top: -10%;
+    }
+
+    .bottom {
+        height: 250px;
+    }
+}

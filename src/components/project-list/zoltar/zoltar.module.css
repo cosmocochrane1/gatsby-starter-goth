@@ -1,0 +1,79 @@
+.container {
+    composes: col col5 from global;
+    pointer-events: none;
+    position: relative;
+}
+
+.wrapper {
+    background: #000;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 75%;
+    width: 100%;
+}
+
+.block {
+    background: no-repeat url('../../../shared/images/zoltar-sprite.png') 0 0;
+    background-size: 200% 200%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.zoltar {
+    composes: block;
+    animation: zoltar 2s ease-in-out 0s infinite alternate;
+    background-position: 1px 5%;
+    top: 5%;
+}
+
+.curtains {
+    composes: block;
+    background-position: 100% 0;
+}
+
+.hands {
+    composes: block;
+    animation: hands 2.5s ease-in-out 0s infinite alternate;
+    background-position: 0 77%;
+    background-size: 200% 500%;
+    bottom: -13%;
+    height: 40%;
+    top: auto;
+}
+
+.ball {
+    composes: hands;
+    animation-name: zoltar;
+    animation-duration: 2.5s;
+    background-position: 100% 77%;
+    bottom: -13%;
+
+    &:after {
+        background: no-repeat url('https://media.giphy.com/media/l1KUMeIKFd7aUscpy/100.gif') center center;
+        background-color: rgba(255, 255, 255, .7);
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 1em #fff, inset 0 0 1em #fff;
+        bottom: 65%;
+        height: 0;
+        content: "";
+        left: 40%;
+        padding-bottom: 20%;
+        position: absolute;
+        width: 20%;
+    }
+}
+
+@keyframes zoltar {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-4%); }
+}
+
+@keyframes hands {
+    0% { transform: rotate(-3deg); }
+    100% { transform: rotate(3deg); }
+}
