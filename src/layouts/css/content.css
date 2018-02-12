@@ -26,32 +26,28 @@
 .text-block .big-text a,
 .content-block p a,
 .content-block .big-text a {
-    background: linear-gradient(#d6d6d6 50%, #131313 50%);
-    text-shadow: 0.03em 0 #d6d6d6, -0.03em 0 #d6d6d6, 0 0.03em #d6d6d6, 0 -0.03em #d6d6d6, 0.06em 0 #d6d6d6,
-        -0.06em 0 #d6d6d6, 0.09em 0 #d6d6d6, -0.09em 0 #d6d6d6, 0.12em 0 #d6d6d6, -0.12em 0 #d6d6d6;
-}
-
-.light {
-    background: #f0f0f0 url('../../shared/images/background-alt.jpg') left top;
-    color: #131313;
-}
-
-.dark {
-    background: #131313 url('../../shared/images/background.jpg') left top;
-    color: #f0f0f0;
-}
-.dark .underline,
-.dark .text-block p a,
-.dark .text-block .big-text a,
-.dark .content-block p a,
-.dark .content-block .big-text a {
-    background: linear-gradient(#131313 50%, #fff 50%);
+    background: linear-gradient(#000 50%, #f7f5e9 50%);
     background-position: 0 0.92em;
     background-repeat: repeat-x;
     background-size: 1px 15%;
     display: inline;
-    text-shadow: 0.03em 0 #131313, -0.03em 0 #131313, 0 0.03em #131313, 0 -0.03em #131313, 0.06em 0 #131313,
-        -0.06em 0 #131313, 0.09em 0 #131313, -0.09em 0 #131313, 0.12em 0 #131313, -0.12em 0 #131313;
+    text-shadow: 0.03em 0 #000, -0.03em 0 #000, 0 0.03em #000, 0 -0.03em #000, 0.06em 0 #000,
+        -0.06em 0 #000, 0.09em 0 #000, -0.09em 0 #000, 0.12em 0 #000, -0.12em 0 #000;
+}
+
+.light {
+    background: #f7f5e9;
+    color: #000;
+}
+
+.light .underline,
+.light .text-block p a,
+.light .text-block .big-text a,
+.light .content-block p a,
+.light .content-block .big-text a {
+    background: linear-gradient(#f7f5e9 50%, #000 50%);
+    text-shadow: 0.03em 0 #f7f5e9, -0.03em 0 #f7f5e9, 0 0.03em #f7f5e9, 0 -0.03em #f7f5e9, 0.06em 0 #f7f5e9,
+        -0.06em 0 #f7f5e9, 0.09em 0 #f7f5e9, -0.09em 0 #f7f5e9, 0.12em 0 #f7f5e9, -0.12em 0 #f7f5e9;
 }
 
 .text-block .strong a,
@@ -102,11 +98,6 @@ body.light .border {
 
 .indented {
     padding-left: 6%;
-}
-
-.inverted {
-    background-color: #fff;
-    color: #131313;
 }
 
 .centered {

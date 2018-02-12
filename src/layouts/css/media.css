@@ -107,21 +107,8 @@
         text-align: left;
     }
 
-    .resume-gif:before,
     .no-mobile {
         display: none;
-    }
-
-    .dance-party {
-        right: 0;
-    }
-
-    .cathands .cathands-inner {
-        margin-top: 30px;
-    }
-
-    .project-list .project-item {
-        padding-bottom: 3%;
     }
 
     .footer-wrapper {
